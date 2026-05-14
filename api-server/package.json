@@ -1,0 +1,51 @@
+{
+  "name": "@workspace/api-server",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "export NODE_ENV=development && pnpm run build && pnpm run start",
+    "build": "node ./build.mjs",
+    "start": "node --enable-source-maps ./dist/index.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@google/genai": "^1.52.0",
+    "@types/connect-pg-simple": "^7.0.3",
+    "@types/express-session": "^1.19.0",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/multer": "^2.1.0",
+    "@workspace/api-zod": "workspace:*",
+    "@workspace/db": "workspace:*",
+    "connect-pg-simple": "^10.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2",
+    "docx": "^9.6.1",
+    "drizzle-orm": "catalog:",
+    "express": "^5",
+    "express-rate-limit": "^8.5.1",
+    "express-session": "^1.19.0",
+    "html-entities": "^2.6.0",
+    "jsonwebtoken": "^9.0.3",
+    "mammoth": "^1.12.0",
+    "memorystore": "^1.6.8",
+    "multer": "^2.1.1",
+    "openai": "^6.36.0",
+    "p-limit": "^7.3.0",
+    "p-retry": "^8.0.0",
+    "pdfjs-dist": "^5.7.284",
+    "pg": "^8.20.0",
+    "pino": "^9",
+    "pino-http": "^10"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "catalog:",
+    "esbuild": "^0.27.3",
+    "esbuild-plugin-pino": "^2.3.3",
+    "pino-pretty": "^13",
+    "thread-stream": "3.1.0"
+  }
+}
